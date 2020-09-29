@@ -1,4 +1,23 @@
 <h2>Success! Please use this link:</h2>
-<p>{{link.link}}</p>
+<p id="copyText">{{link.link}}</p>
 
-<button>Copy</button>
+<input type="button" class="btn btn-primary" onclick="copyLink()" title="Copy to Clipboard"
+  value="Copy" readonly />
+
+<script>
+  function copyLink() {
+    const copyText = document.getElementById("copyText")
+
+    let selection = window.getSelection(); //選取整個window領域
+
+    let range = document.createRange(); 
+
+    range.selectNodeContents(copyText); //將範圍設定在要複製的字串
+
+    selection.removeAllRanges(); //清空選取的範圍
+
+    selection.addRange(range); //將選取的範圍變成字串的範圍
+ 
+    document.execCommand('copy'); //執行複製到剪貼板
+  }
+</script>
