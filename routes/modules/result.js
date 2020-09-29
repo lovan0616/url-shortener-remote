@@ -8,7 +8,7 @@ router.post('/', (req, res) => {
   // 設定url變數
   const url = req.body.url
   // 設定scram變數
-  const scram = generateScram()
+  let scram = generateScram()
 
   // 防止產生重複亂碼的機制
   while (generatedScrams.includes(scram)) {
