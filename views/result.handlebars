@@ -1,8 +1,17 @@
-<h2>Success! Please use this link:</h2>
-<p id="copyText">{{link.link}}</p>
+<h2 style="color: whitesmoke; width:max-content">成功縮短網址啦！</h2>
+<img
+  src="https://images.vexels.com/media/users/3/136294/isolated/preview/4172fc9833fe18b5f8669b148713a189-link-icon-by-vexels.png"
+  width="30%">
 
-<input type="button" class="btn btn-primary" onclick="copyLink()" title="Copy to Clipboard"
-  value="Copy" readonly />
+<div class="row">
+  <div class="col-12 align-self-center">
+    <p id="copyText" style="width: 100%; color:whitesmoke">{{link.link}}</p>
+  </div>
+  <div class="col-12 align-self-center">
+    <input type="button" class="btn btn-secondary" style="width: 100%;" onclick="copyLink()" title="Copy to Clipboard" value="Copy" readonly />
+  </div>
+</div>
+
 
 <script>
   function copyLink() {
