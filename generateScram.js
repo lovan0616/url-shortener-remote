@@ -11,3 +11,5 @@ function generateScram() {
   }
   return scram
 }
+
+module.exports = generateScram
